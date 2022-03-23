@@ -56,10 +56,8 @@ public class Range<T> implements Set<T> {
     public boolean addAll(Collection<? extends T> c) {
         boolean a = false;
         for (T e : c) {
-            if (!mySetlist.contains(e)) {
-                mySetlist.add(e);
-                a = true;
-            }
+            mySetlist.add(e);
+            a = true;
         }
         return a;
     }
@@ -91,10 +89,12 @@ public class Range<T> implements Set<T> {
 
 
     public boolean add(T t) {
+        boolean aaa = false;
         if (!mySetlist.contains(t)) {
-            return mySetlist.add(t);
+             mySetlist.add(t);
+             aaa=true;
         }
-        return false;
+        return aaa;
     }
 
 
